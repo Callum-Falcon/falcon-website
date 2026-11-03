@@ -1,0 +1,11 @@
+# Netlify redirects for pages that have moved or been removed.
+# Old Projects and Education pages now live under Our work > UK schools
+/projects             /uk-schools  301
+/projects.html        /uk-schools  301
+/education            /uk-schools  301
+/education.html       /uk-schools  301
+# Removed sector pages - Falcon Reports works only with independent schools
+/finance              /            301
+/finance.html         /            301
+/public-sector        /            301
+/public-sector.html   /            301

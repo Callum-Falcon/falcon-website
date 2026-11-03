@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Falcon Reports gathers your school's data into one secure, trusted platform: the foundation for reports staff trust and AI you can rely on." />
+    <meta name="theme-color" content="#0b1d33" />
+    <title>Falcon Reports | The data platform for independent schools</title>
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand">
+          <img src="assets/falcon-logo-white.png" alt="" />
+          <span>Falcon Reports</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="main-nav" aria-label="Main">
+          <a href="platform.html">Platform</a>
+          <a href="ai-ready-data.html">AI-ready data</a>
+          <a href="reports.html">Reports</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="schools-menu">Schools</button>
+            <ul class="nav-dropdown-menu" id="schools-menu">
+              <li><a href="uk-schools.html">UK schools</a></li>
+              <li><a href="international-schools.html">International schools</a></li>
+            </ul>
+          </div>
+          <a href="about.html">About</a>
+          <a href="mailto:admin@falconreports.com" class="nav-cta">Book a call</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-intro">
+          <p class="hero-eyebrow">The data platform for independent schools</p>
+          <h1>All your school's data, in one place you can trust</h1>
+          <p class="hero-lead">
+            We gather data from your MIS and other systems, clean it, join it
+            up and secure it pupil by pupil. The foundation for reports your
+            staff trust, and AI you can rely on.
+          </p>
+          <div class="btn-row">
+            <a href="platform.html" class="btn btn-primary"
+              >See how the platform works <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg
+            ></a>
+            <a href="reports.html" class="btn btn-ghost">See the reports</a>
+          </div>
+        </div>
+
+        <!-- Interactive data-flow diagram. Lines and dots are drawn by script.js. -->
+        <div class="flow-box">
+          <div class="flow" data-flow data-selected="att">
+            <svg class="flow-svg" aria-hidden="true"></svg>
+
+            <div class="flow-col flow-src">
+              <p class="flow-label">Your systems</p>
+              <div class="flow-group">
+                <p class="flow-group-title">Your MIS</p>
+                <button type="button" class="pill" data-source data-id="acad" data-print="1" data-text="Grades, effort and comments from every report cycle.">Academic reports</button>
+                <button type="button" class="pill" data-source data-id="pupil" data-print="1" data-text="Who your pupils are: year groups, forms and houses.">Pupil data</button>
+                <button type="button" class="pill" data-source data-id="rs" data-text="Merits and sanctions, by pupil and over time.">Rewards and sanctions</button>
+                <button type="button" class="pill" data-source data-id="att" data-print="1" data-text="Every registration mark, ready for trend reporting.">Attendance</button>
+                <button type="button" class="pill" data-source data-id="setup" data-print="1" data-text="Terms, subjects, sets and staff: the structure that ties it all together.">School setup</button>
+                <button type="button" class="pill" data-source data-id="misother" data-text="Any other MIS data your school relies on, from boarding to trips.">Others</button>
+              </div>
+              <button type="button" class="pill" data-source data-id="adm" data-text="Enquiries and applications, for pipeline and trend reporting.">Admissions</button>
+              <button type="button" class="pill" data-source data-id="assess" data-print="1" data-text="Internal assessments and exam results, linked to each pupil.">Assessment and exams</button>
+              <button type="button" class="pill" data-source data-id="std" data-print="1" data-text="Standardised scores, for benchmarking and progress.">Standardised tests</button>
+              <button type="button" class="pill" data-source data-id="sport" data-text="Teams, fixtures and clubs, alongside each pupil’s record.">Sports and activities</button>
+              <button type="button" class="pill" data-source data-id="lookup" data-text="Reference lists and codes that keep every system consistent.">Lookup data</button>
+              <button type="button" class="pill" data-source data-id="fin" data-text="Fees and budgets, for leadership and governor reporting.">Finance</button>
+              <button type="button" class="pill" data-source data-id="hr" data-text="Staffing data, for workforce reporting.">HR</button>
+              <button type="button" class="pill" data-source data-id="mkt" data-text="Campaigns and engagement, alongside admissions and enquiries.">Marketing</button>
+              <button type="button" class="pill" data-source data-id="sp" data-label="SharePoint" data-text="Files and lists your staff already keep. Coming soon.">SharePoint <span class="pill-tag">coming soon</span></button>
+              <button type="button" class="pill" data-source data-id="sheets" data-text="The trackers and lists kept outside your systems, brought in with care.">Spreadsheets</button>
+              <button type="button" class="pill" data-source data-id="docs" data-text="Useful information locked in documents, turned into data you can use.">Documents</button>
+            </div>
+
+            <div class="flow-gap" data-gap="in"></div>
+
+            <div class="flow-col flow-platform">
+              <p class="platform-title"><img src="assets/falcon-logo-navy.png" alt="" />Falcon data platform</p>
+              <div class="platform-stage">
+                <span class="stage-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h13M12 3l4 4-4 4"/><path d="M21 17H8M12 13l-4 4 4 4"/></svg></span>
+                <div><strong>Pipeline</strong><span>Brings data in automatically</span></div>
+              </div>
+              <div class="platform-stage">
+                <span class="stage-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8c2.5 2 5 2 7.5 0s5-2 7.5 0 3.5 1.5 5 0"/><path d="M2 13c2.5 2 5 2 7.5 0s5-2 7.5 0 3.5 1.5 5 0"/><path d="M2 18c2.5 2 5 2 7.5 0s5-2 7.5 0 3.5 1.5 5 0"/></svg></span>
+                <div><strong>Data lake</strong><span>Clean, standardised and curated data</span></div>
+              </div>
+              <div class="platform-stage">
+                <span class="stage-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+                <div><strong>Data model</strong><span>Central, single source of truth</span></div>
+              </div>
+              <p class="platform-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Secured pupil by pupil</p>
+            </div>
+
+            <div class="flow-gap" data-gap="out"></div>
+
+            <div class="flow-col flow-out">
+              <p class="flow-label">What it powers</p>
+              <div class="flow-group">
+                <p class="flow-group-title">Reports</p>
+                <button type="button" class="pill pill--out" data-output data-id="ireports" data-text="Explore and filter reports built around your school.">Interactive reports</button>
+                <button type="button" class="pill pill--out" data-output data-id="preports" data-text="School-branded pupil reports, ready to print.">Printable reports</button>
+              </div>
+              <button type="button" class="pill pill--out" data-output data-id="dash" data-text="At-a-glance views for leaders and staff.">Dashboards</button>
+              <button type="button" class="pill pill--out" data-output data-id="ai" data-text="Questions answered from trusted data, within each person’s permissions.">AI processing</button>
+              <button type="button" class="pill pill--out" data-output data-id="own" data-text="Direct access for your team, in Excel or your own tools.">Your own analysis</button>
+              <div class="flow-outcome">
+                <svg viewBox="0 0 18 26" aria-hidden="true"><path d="M9 1v22M2 16l7 7 7-7"/></svg>
+                <p class="outcome-card">
+                  <strong>Better, faster decisions</strong>
+                  <span>A joined-up, data-rich view of your whole school.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="flow-detail" aria-live="polite">
+            <strong data-flow-title>Attendance</strong>
+            <span data-flow-text>Every registration mark, ready for trend reporting.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Sound familiar?</p>
+            <h2 class="h2">Your school already has the answers. They're just scattered.</h2>
+            <p class="lead-muted">
+              Before you can trust a report, or ask AI anything useful, your
+              data must be in one place, in good shape and protected. That's
+              what we do.
+            </p>
+          </div>
+          <ol class="numbered-list" style="flex-grow: 1.4">
+            <li><span class="num">01</span>Your systems each hold part of the picture, and don't talk to each other.</li>
+            <li><span class="num">02</span>Data is exported to spreadsheets and rebuilt by hand every half-term.</li>
+            <li><span class="num">03</span>Departments quote different numbers for the same thing.</li>
+            <li><span class="num">04</span>Everyone wants AI, but nobody's sure the data is ready, or safe.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--subtle">
+        <div class="container">
+          <div class="section-head section-head--row">
+            <div>
+              <p class="eyebrow">The platform</p>
+              <h2>One platform that does the hard work for you</h2>
+            </div>
+            <a href="platform.html" class="link-arrow"
+              >How the platform works <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg
+            ></a>
+          </div>
+          <div class="grid grid--250">
+            <div class="card">
+              <h3>Collect</h3>
+              <p>We gather everything from your MIS and other systems automatically, with a full history of where it came from.</p>
+            </div>
+            <div class="card">
+              <h3>Clean</h3>
+              <p>Every record is checked. Gaps, duplicates and mismatches are caught, not passed on to your reports.</p>
+            </div>
+            <div class="card">
+              <h3>Connect</h3>
+              <p>Data is organised around your pupils, staff, houses, forms and subjects, so every report starts from the same facts.</p>
+            </div>
+            <div class="card">
+              <h3>Secure</h3>
+              <p>Access is built into the data. Parents see their child, tutors their form, leaders the whole school.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">What it makes possible</p>
+            <h2>Get the foundation right, and everything built on it improves</h2>
+          </div>
+          <div class="grid grid--340">
+            <a href="reports.html" class="feature-card">
+              <div class="feature-visual feature-visual--image">
+                <img src="assets/video/effort-by-subject-poster.jpg" alt="Effort by subject report showing pupils' class and prep effort, colour-coded by subject" loading="lazy" />
+              </div>
+              <div class="feature-body">
+                <h3>Reports everyone agrees on</h3>
+                <p>Dashboards and printable pupil reports that refresh themselves, from the same trusted data.</p>
+                <span class="more">See the reports <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              </div>
+            </a>
+            <a href="ai-ready-data.html" class="feature-card">
+              <div class="feature-visual feature-visual--navy">
+                <p class="bubble bubble--q">Which Year 10 pupils have falling attendance and slipping effort this term?</p>
+                <p class="bubble bubble--a">An answer from your attendance and reports data, limited to pupils you can see.</p>
+                <p class="illustration-note">Illustration</p>
+              </div>
+              <div class="feature-body">
+                <h3>Data that's ready for AI</h3>
+                <p>AI is only as good as its data. We make yours complete, clean, explained and safely permissioned.</p>
+                <span class="more">Why AI needs this <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              </div>
+            </a>
+            <a href="platform.html" class="feature-card">
+              <div class="feature-visual">
+                <p class="table-chip"><strong>pupil</strong><span>one row per pupil</span></p>
+                <p class="table-chip"><strong>attendance</strong><span>every session</span></p>
+                <p class="table-chip"><strong>reports</strong><span>every grade, every cycle</span></p>
+              </div>
+              <div class="feature-body">
+                <h3>Your data, easy to use</h3>
+                <p>All your school's data, easily accessible in Excel or your own tools.</p>
+                <span class="more">About the platform <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--navy">
+        <div class="container split split--center">
+          <div>
+            <p class="eyebrow">Secure by design</p>
+            <h2 class="h2">Everyone sees exactly what they should</h2>
+            <p class="lead-muted" style="color: var(--on-navy)">
+              Access follows your school's structure and staff records. If
+              anything doesn't check out, access is refused. The same rules
+              apply to every report and AI tool.
+            </p>
+            <a href="platform.html" class="link-arrow" style="margin-top: 14px"
+              >How we protect pupil data <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg
+            ></a>
+          </div>
+          <div class="nest" aria-label="Access is nested: whole school, then house, then form, then each pupil">
+            <p class="nest-label"><strong>Whole school</strong> · senior leaders and governors</p>
+            <div class="nest">
+              <p class="nest-label"><strong>House</strong> · heads of house</p>
+              <div class="nest">
+                <p class="nest-label"><strong>Form</strong> · tutors</p>
+                <p class="nest-pupils">
+                  <span class="is-highlight">Pupil · their parents</span><span>Pupil</span><span>Pupil</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Why Falcon Reports</p>
+            <h2>Built by people who know schools and data</h2>
+          </div>
+          <div class="grid grid--280">
+            <div class="ruled">
+              <h3>Only independent schools</h3>
+              <p>We work only with independent schools, so we understand your systems, reporting cycles and questions.</p>
+            </div>
+            <div class="ruled">
+              <h3>From inside the sector</h3>
+              <p>Experience of school leadership and data management, combined with years of building secure cloud platforms.</p>
+            </div>
+            <div class="ruled">
+              <h3>Always up to date</h3>
+              <p>Hosted securely in the cloud and refreshed regularly throughout the day, so your data is always easy to reach.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="container">
+          <div class="cta-band">
+            <div>
+              <h2>See what your school's data could look like</h2>
+              <p>We'll walk you through the platform and reports, and the questions you need answered.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="mailto:admin@falconreports.com" class="btn btn-primary">Book a call</a>
+              <a href="mailto:admin@falconreports.com" class="email">admin@falconreports.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand"><img src="assets/falcon-logo-navy.png" alt="" />Falcon Reports</p>
+        <p class="footer-meta">
+          <a href="mailto:admin@falconreports.com">admin@falconreports.com</a>
+          <span>United Kingdom</span>
+          <span>&copy; 2026 Falcon Data Analytics Ltd</span>
+        </p>
+      </div>
+      <p class="footer-legal">
+        Falcon Reports is a trading name of Falcon Data Analytics Ltd, a company
+        registered in England and Wales (company no. 11396208).
+      </p>
+    </footer>
+  </body>
+</html>
