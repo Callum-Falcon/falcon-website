@@ -35,7 +35,7 @@ Falcon Reports works only with UK and international independent schools, so the 
 Each pill in `index.html` is a `<button>`. The lines and moving dots are drawn by `script.js` from where the pills sit on the page, so you can add, remove or reorder pills without touching any coordinates.
 
 - A source needs `data-source`, a unique `data-id` and a `data-text` (shown underneath when clicked).
-- Add `data-print="1"` to a source that also feeds **Printable reports**. Every other source feeds every output.
+- Every source feeds every output, so all lines stay lit. Clicking a pill makes its own line bolder and shows its `data-text` underneath.
 - An output needs `data-output`, a unique `data-id` and a `data-text`.
 
 ## Showcase videos on the UK schools page

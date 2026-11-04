@@ -40,9 +40,11 @@
 
   /* ---------------------------------------------------------------------
      2. Data-flow diagram
-     Each pill is a <button> with data-id and data-text. Sources marked
-     data-print="1" also feed printable reports. Lines are drawn from the
-     real positions of the pills, so the layout can change freely in CSS.
+     Each pill is a <button> with data-id and data-text. Every source feeds
+     every output, so all lines stay lit; clicking a pill makes its own
+     line bolder and shows its description underneath. Lines are drawn
+     from the real positions of the pills, so the layout can change freely
+     in CSS.
      --------------------------------------------------------------------- */
   var flow = document.querySelector('[data-flow]');
 
@@ -61,10 +63,6 @@
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var selected = flow.getAttribute('data-selected') || sources[0].getAttribute('data-id');
     var lines = [];
-
-    var feeds = function (source, output) {
-      return output.getAttribute('data-id') !== 'preports' || source.getAttribute('data-print') === '1';
-    };
 
     var findById = function (list, id) {
       for (var i = 0; i < list.length; i++) {
@@ -156,37 +154,25 @@
     };
 
     var update = function () {
-      var selSource = findById(sources, selected);
-      var selOutput = findById(outputs, selected);
+      var current = findById(sources, selected) || findById(outputs, selected);
+      var baseRadius = mobileQuery.matches ? 4.5 : 3.5;
 
-      var sourceLit = function (pill) {
-        return pill === selSource || (selOutput !== null && feeds(pill, selOutput));
-      };
-      var outputLit = function (pill) {
-        return pill === selOutput || (selSource !== null && feeds(selSource, pill));
-      };
-
-      sources.forEach(function (pill) {
-        var lit = sourceLit(pill);
-        pill.classList.toggle('is-selected', pill === selSource);
-        pill.classList.toggle('is-related', lit && pill !== selSource);
-        pill.setAttribute('aria-pressed', pill === selSource ? 'true' : 'false');
-      });
-
-      outputs.forEach(function (pill) {
-        var lit = outputLit(pill);
-        pill.classList.toggle('is-selected', pill === selOutput);
-        pill.classList.toggle('is-related', lit && pill !== selOutput);
-        pill.setAttribute('aria-pressed', pill === selOutput ? 'true' : 'false');
+      sources.concat(outputs).forEach(function (pill) {
+        pill.classList.toggle('is-selected', pill === current);
+        pill.setAttribute('aria-pressed', pill === current ? 'true' : 'false');
       });
 
       lines.forEach(function (line) {
-        var lit = line.kind === 'in' ? sourceLit(line.pill) : outputLit(line.pill);
-        line.path.classList.toggle('is-lit', lit);
-        if (line.dot) line.dot.classList.toggle('is-lit', lit);
+        var active = line.pill === current;
+        line.path.classList.toggle('is-active', active);
+        if (line.dot) line.dot.setAttribute('r', String(active ? baseRadius + 1.5 : baseRadius));
+        if (active) {
+          // draw the selected line (and its dot) on top of the others
+          svg.appendChild(line.path);
+          if (line.dot) svg.appendChild(line.dot);
+        }
       });
 
-      var current = selSource || selOutput;
       if (current && detailTitle && detailText) {
         detailTitle.textContent = current.getAttribute('data-label') || current.textContent.trim();
         detailText.textContent = current.getAttribute('data-text');
